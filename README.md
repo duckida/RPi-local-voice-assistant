@@ -1,8 +1,39 @@
 # RPi-local-voice-assistant
 Local voice assistant running on Raspberry Pi 5 - powered by VOSK STT, Ollama, and KittenTTS
 
+## Features
+- STT powered by VOSK - lightweight and efficient
+- Ollama local LLM processes queries
+- TTS powered by KittenTTS
+
 ## Setup Instructions
+Requirements: 
+- Mic
+- Speaker
+- Ollama installed with a model downloaded
+
 1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 3. Run `uv run main.py`
 
+## Start on boot
+1. Create a service: `sudo systemctl edit --force --full local-ai-assistant.service`
+2. Paste the following into the service:
+```
+[Unit]
+Description=Local AI Assistant
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/.local/bin/uv run /home/pi/local-ai-assistant/main.py
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+WorkingDirectory=/home/pi/local-ai-assistant
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+3. Reload the systemd daemon: `sudo systemctl daemon-reload`
+4. Enable the service: `sudo systemctl enable local-ai-assistant.service`
+5. Reboot your Pi and it should start!
