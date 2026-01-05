@@ -1,0 +1,21 @@
+[project]
+name = "local-ai-assistant"
+version = "0.1.0"
+description = "Raspberry Pi Local voice assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gpiozero>=2.0.1",
+    "kittentts",
+    "lgpio>=0.2.2.0",
+    "numba>=0.57.0",
+    "ollama>=0.6.1",
+    "parakeet-stream",
+    "rpi-gpio>=0.7.1",
+    "sounddevice>=0.5.3",
+    "vosk>=0.3.45",
+]
+
+[tool.uv.sources]
+kittentts = { url = "https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentts-0.1.0-py3-none-any.whl" }
+parakeet-stream = { git = "https://github.com/maximerivest/parakeet-stream.git" }
