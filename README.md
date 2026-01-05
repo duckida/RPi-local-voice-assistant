@@ -12,7 +12,9 @@ Requirements:
 - Speaker
 - Ollama installed with a model downloaded
 
-> Right now, the code uses the Ollama model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
+> By default, the code uses the Ollama model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
+
+> By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py. To use this model, run `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`.
 
 1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
