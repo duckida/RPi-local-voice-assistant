@@ -12,6 +12,8 @@ Requirements:
 - Speaker
 - Ollama installed with a model downloaded
 
+> Right now, the code uses the Ollama model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
+
 1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 3. Run `uv run main.py`
