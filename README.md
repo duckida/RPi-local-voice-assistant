@@ -43,6 +43,5 @@ WantedBy=multi-user.target
 5. Reboot your Pi and it should start!
 
 ## Star History
-## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=duckida/RPi-local-voice-assistant&type=date&legend=top-left)](https://www.star-history.com/#duckida/RPi-local-voice-assistant&type=date&legend=top-left)
