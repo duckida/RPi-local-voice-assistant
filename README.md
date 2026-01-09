@@ -8,7 +8,7 @@ Local voice assistant running on Raspberry Pi 5 - powered by VOSK STT, Ollama, a
 - Trigger with button on GPIO 23
 - Status LED on GPIO 25
 
-The project is designed for the AIY Voice Kit!
+The project has been tested on the Raspberry Pi 5 (4GB RAM) and is designed for the AIY Voice Kit, though it works with any mic and speaker!
 
 ## Setup Instructions
 Requirements: 
