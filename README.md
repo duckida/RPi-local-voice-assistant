@@ -5,6 +5,8 @@ Local voice assistant running on Raspberry Pi 5 - powered by VOSK STT, Ollama, a
 - STT powered by VOSK - lightweight and efficient
 - Ollama local LLM processes queries
 - TTS powered by KittenTTS
+- Trigger with button on GPIO 23
+- Status LED on GPIO 25
 
 ## Setup Instructions
 Requirements: 
