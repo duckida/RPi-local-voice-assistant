@@ -18,11 +18,12 @@ Requirements:
 
 > By default, the code uses the Ollama model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
 
-> By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py. To use this model, run `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`.
+> By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
 
 1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-3. Run `uv run main.py`
+3. Download the VOSK model: `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`
+4. Run `uv run main.py`
 
 ## Start on boot
 1. Create a service: `sudo systemctl edit --force --full local-ai-assistant.service`
