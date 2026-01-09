@@ -1,10 +1,10 @@
 # RPi-local-voice-assistant
-Local voice assistant running on Raspberry Pi 5 - powered by VOSK STT, Ollama, and KittenTTS
+Local voice assistant running on Raspberry Pi 5 powered by VOSK STT, Ollama, and KittenTTS
 
 ## Features
-- STT powered by VOSK - lightweight and efficient
+- STT powered by VOSK 
 - Ollama local LLM processes queries
-- TTS powered by KittenTTS
+- TTS powered by [KittenTTS](https://github.com/KittenML/KittenTTS)
 - Trigger with button on GPIO 23
 - Status LED on GPIO 25
 
