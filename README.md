@@ -49,6 +49,9 @@ WantedBy=multi-user.target
 4. Enable the service: `sudo systemctl enable local-ai-assistant.service`
 5. Reboot your Pi and it should start!
 
+## Audio details
+The code is designed for the latest Raspberry Pi OS Trixie, which uses PipeWire for audio. As such, the code uses `pw-play` to play audio and `python-sounddevice` for recording. It should use the default microphone and speaker connected, which can be changed thru the RPi Desktop UI.
+
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=duckida/RPi-local-voice-assistant&type=date&legend=top-left)](https://www.star-history.com/#duckida/RPi-local-voice-assistant&type=date&legend=top-left)
