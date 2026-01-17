@@ -20,7 +20,7 @@ stt_lib.init(button, led)
 server_process = subprocess.Popen([
     "/home/pi/llama.cpp/build/bin/llama-server", 
     "-hf", "LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0", 
-    "--port", "8080", "-c", "8192"
+    "--host", "0.0.0.0", "--port", "8080", "-c", "8192"
 ])
 
 # Give the model about 10 seconds to load into memory
