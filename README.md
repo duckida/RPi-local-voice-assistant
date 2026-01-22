@@ -18,7 +18,7 @@ Requirements:
 
 > If using Ollama, by default the code uses the model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
 
-> If using llama.cpp, by default the code uses the model [LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) This can be changed in main_llama.py.
+> If using llama.cpp, by default the code uses the model [LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) This can be changed in main_llama.py. We also reccommend mradermacher/Youtu-LLM-2B-GGUF:Q6_K
 
 > By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
 
