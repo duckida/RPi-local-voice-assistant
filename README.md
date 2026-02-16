@@ -16,16 +16,19 @@ Requirements:
 - Speaker
 - Ollama or llama.cpp installed with a model downloaded
 
-> If using Ollama, by default the code uses the model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
-
-> If using llama.cpp, by default the code uses the model [`LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0`](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) This can be changed in main_llama.py. We also reccommend `mradermacher/Youtu-LLM-2B-GGUF:Q6_K` and `unsloth/gemma-3n-E2B-it-GGUF:Q4_K_S`
-
-> By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
+## Instructions
 
 1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
 2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 3. Download the VOSK model: `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`
 4. If using the Ollama version, run `uv run main.py `. If using the llama.cpp version, run `uv run main_llama.py`
+
+## Notes
+If using Ollama, by default the code uses the model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
+
+If using llama.cpp, by default the code uses the model [`LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0`](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) This can be changed in main_llama.py. We also reccommend ` mradermacher/Youtu-LLM-2B-i1-GGUF:Q4_K_M` and `unsloth/gemma-3n-E2B-it-GGUF:Q4_K_S`
+
+By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
 
 ## Start on boot
 1. Create a service: `sudo systemctl edit --force --full local-ai-assistant.service`
