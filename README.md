@@ -1,5 +1,5 @@
 # RPi-local-voice-assistant
-Local voice assistant running on Raspberry Pi 5 powered by VOSK STT, local LLM, and KittenTTS
+Local voice assistant running on Raspberry Pi 5 powered by VOSK STT, local LLM (llama.cpp or Ollama), and KittenTTS
 
 ## Table of Contents
 * [Features](#features)
@@ -33,7 +33,7 @@ If using Ollama, by default the code uses the model [`exaone3.5:2.4b`](https://o
 If using llama.cpp, by default the code uses the model [`LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0`](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) This can be changed in main_llama.py. 
 We also recommend `mradermacher/Youtu-LLM-2B-i1-GGUF:Q4_K_M` for reasoning-heavy tasks and `unsloth/gemma-3n-E2B-it-GGUF:Q4_K_S` for models with more RAM
 
-By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
+By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)) which you will have to download. This can be changed in main.py.
 
 ## Instructions
 
@@ -72,6 +72,8 @@ The code is designed for the latest Raspberry Pi OS Trixie, which uses PipeWire 
 You will need to add `dtoverlay=googlevoicehat-soundcard` to the end of your `/boot/config/firmware.txt`
 
 ## LLM tests
+
+We recommend using llama.cpp as it gives access to a nice web UI and more models compared to Ollama!
 
 - [Qwen3 1.7B](https://ollama.com/library/qwen3) - works as long as `/nothink` added to the prompt
 - [EXAONE 3.5 2.4B](https://ollama.com/library/exaone3.5) - OK for world knowledge
