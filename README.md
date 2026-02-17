@@ -1,6 +1,15 @@
 # RPi-local-voice-assistant
 Local voice assistant running on Raspberry Pi 5 powered by VOSK STT, local LLM, and KittenTTS
 
+## Table of Contents
+* [Features](#features)
+* [Setup Instructions](#setup-instructions)
+* [Notes](#notes)
+* [Start on boot](#start-on-boot)
+* [Audio details](#audio-details)
+* [AIY Voice Kit setup](#aiy-voice-kit-setup)
+* [Star History](#star-history)
+
 ## Features
 - STT powered by VOSK 
 - Ollama or llama.cpp local LLM processes queries
@@ -15,14 +24,7 @@ Requirements:
 - Mic
 - Speaker
 - Ollama or llama.cpp installed with a model downloaded
-
-## Instructions
-
-1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
-2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-3. Download the VOSK model: `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`
-4. If using the Ollama version, run `uv run main.py`.
-   If using the llama.cpp version, run `uv run main_llama.py`
+- Raspberry Pi OS (tested on Trixie 64-bit)
 
 ## Notes
 If using Ollama, by default the code uses the model [`exaone3.5:2.4b`](https://ollama.com/library/exaone3.5:2.4b). This can be changed in main.py.
@@ -31,6 +33,14 @@ If using llama.cpp, by default the code uses the model [`LiquidAI/LFM2.5-1.2B-In
 We also recommend `mradermacher/Youtu-LLM-2B-i1-GGUF:Q4_K_M` for reasoning-heavy tasks and `unsloth/gemma-3n-E2B-it-GGUF:Q4_K_S` for models with more RAM
 
 By default, the code uses the VOSK model [vosk-model-en-us-0.22-lgraph]([url](https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip)). This can be changed in main.py.
+
+## Instructions
+
+1. Clone this repo: `git clone https://github.com/duckida/RPi-local-voice-assistant`
+2. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+3. Download the VOSK model: `wget https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip && unzip vosk-model-en-us-0.22-lgraph.zip`
+4. If using the Ollama version, run `uv run main.py`.
+   If using the llama.cpp version, run `uv run main_llama.py`
 
 ## Start on boot
 1. Create a service: `sudo systemctl edit --force --full local-ai-assistant.service`
@@ -56,6 +66,9 @@ WantedBy=multi-user.target
 
 ## Audio details
 The code is designed for the latest Raspberry Pi OS Trixie, which uses PipeWire for audio. As such, the code uses `pw-play` to play audio and `python-sounddevice` for recording. It should use the default microphone and speaker connected, which can be changed thru the RPi Desktop UI.
+
+## AIY Voice Kit setup
+You will need to add `dtoverlay=googlevoicehat-soundcard` to the end of your `/boot/config/firmware.txt`
 
 ## Star History
 
