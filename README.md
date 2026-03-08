@@ -75,13 +75,21 @@ You will need to add `dtoverlay=googlevoicehat-soundcard` to the end of your `/b
 
 We recommend using llama.cpp as it gives access to a nice web UI and more models compared to Ollama!
 
+### Ollama models
 - [Qwen3 1.7B](https://ollama.com/library/qwen3) - works as long as `/nothink` added to the prompt
-- [EXAONE 3.5 2.4B](https://ollama.com/library/exaone3.5) - OK for world knowledge
+- ✨ [EXAONE 3.5 2.4B](https://ollama.com/library/exaone3.5) - OK for world knowledge
+
+### llama.cpp models
+- ✨ [Gemma 3n e2B](https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/tree/main) - great world knowledge, slightly slower
+- ✨ [LFM2.5 1.5B](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) - ideal for low-latency responses, can answer basic questions
+
 - [Youtu LLM 2B](https://huggingface.co/mradermacher/Youtu-LLM-2B-GGUF) - good for reasoning but struggles in non-reasoning mode
-- [LFM2.5 1.5B](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) - ideal for low-latency responses, can answer basic questions
-- [Gemma 3n e2B](https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/tree/main) - great world knowledge, slightly slower
+- [Kanana Nano 1.2B](https://huggingface.co/DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF/tree/main) - very fast model, can answer basic questions
 - [Qwen3 4B 2507 Instruct](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/main?local-app=llama.cpp) - OK world knowledge, slower than Gemma3
-- 
+
+
+
+  
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=duckida/RPi-local-voice-assistant&type=date&legend=top-left)](https://www.star-history.com/#duckida/RPi-local-voice-assistant&type=date&legend=top-left)
