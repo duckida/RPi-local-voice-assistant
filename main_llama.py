@@ -7,6 +7,15 @@ from gpiozero import Button, PWMLED
 from kittentts import KittenTTS
 import subprocess
 from time import sleep
+import argparse
+
+parser = argparse.ArgumentParser(description="A simple greeting script")
+parser.add_argument("model", help="The name of the Hugging Face model to use in llama.cpp (eg LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0)")
+
+# 3. Parse the arguments
+args = parser.parse_args()
+
+llama_model = args.model
 
 # Hardware Setup
 button = Button(23)
@@ -19,7 +28,7 @@ stt_lib.init(button, led)
 
 server_process = subprocess.Popen([
     "/home/pi/llama.cpp/build/bin/llama-server", 
-    "-hf", "LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q8_0", 
+    "-hf", args.model, 
     "--host", "0.0.0.0", "--port", "8080", "-c", "8192"
 ])
 
