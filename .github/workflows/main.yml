@@ -21,7 +21,7 @@ jobs:
         run: |
           uv python install 3.12
           # This installs everything including the git/url dependencies
-          uv pip install --system pyinstaller . 
+          uv pip install --break-system-packages pyinstaller . 
 
       - name: Build with PyInstaller
         run: |
