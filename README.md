@@ -8,7 +8,7 @@ Local voice assistant running on Raspberry Pi 5 powered by VOSK STT, local LLM (
 * [Start on boot](#start-on-boot)
 * [Audio details](#audio-details)
 * [AIY Voice Kit setup](#aiy-voice-kit-setup)
-* [LLM tests](#llm-tests)
+* [Recommended models](#llm-tests)
 * [Star History](#star-history)
 
 ## Features
