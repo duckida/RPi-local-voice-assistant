@@ -80,14 +80,13 @@ We recommend using llama.cpp as it gives access to a nice web UI and more models
 - ✨ [EXAONE 3.5 2.4B](https://ollama.com/library/exaone3.5) - OK for world knowledge
 
 ### llama.cpp models
-- ✨ [Gemma 3n e2B](https://huggingface.co/unsloth/gemma-3n-E2B-it-GGUF/tree/main) - great world knowledge, slightly slower
+- ✨ [Gemma 4 e2B](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF) - best all rounder - great world knowledge, slightly slower
+- ✨ [Qwen 3.5 2B](https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/tree/main) - good tool calling, same speed as Gemma 4, though less world knowledge
 - ✨ [LFM2.5 1.5B](https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF) - ideal for low-latency responses, can answer basic questions
 
 - [Youtu LLM 2B](https://huggingface.co/mradermacher/Youtu-LLM-2B-GGUF) - good for reasoning but struggles in non-reasoning mode
-- [Kanana Nano 1.2B](https://huggingface.co/DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF/tree/main) - very fast model, can answer basic questions
-- [Qwen3 4B 2507 Instruct](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/main?local-app=llama.cpp) - OK world knowledge, slower than Gemma3
-
-
+- [Kanana Nano 1.2B](https://huggingface.co/DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF/tree/main) - fast model, can answer basic questions
+- [Qwen3 4B 2507 Instruct](https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/tree/main?local-app=llama.cpp) - OK world knowledge, slower than Gemma
 
   
 ## Star History
